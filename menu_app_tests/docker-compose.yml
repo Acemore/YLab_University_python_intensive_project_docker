@@ -1,0 +1,11 @@
+services:
+  api-tests:
+    build: tests-container/.
+    environment:
+      - LOCAL_URL=http://api:8000
+    networks:
+      - menu_app_default
+
+networks:
+  menu_app_default:
+    external: true
